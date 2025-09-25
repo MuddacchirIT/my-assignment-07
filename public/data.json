@@ -1,0 +1,102 @@
+[
+  {
+    "id": "01",
+    "ticketId": "PH-2004",
+    "title": "Unable to Download Invoice",
+    "description": "User cannot play videos on mobile device.",
+    "customer": "Sarah Saba",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2025-09-16T16:30:00Z"
+  },
+  {
+    "id": "02",
+    "ticketId": "PH-2005",
+    "title": "Login Error on Web",
+    "description": "User reports invalid credentials despite correct password.",
+    "customer": "Mark Spencer",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-17T09:45:00Z"
+  },
+  {
+    "id": "03",
+    "ticketId": "PH-2006",
+    "title": "Checkout Timeout",
+    "description": "Payment not processing, error 504 returned.",
+    "customer": "Emily Chen",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-18T14:10:00Z"
+  },
+  {
+    "id": "04",
+    "ticketId": "PH-2007",
+    "title": "App Crash on Launch",
+    "description": "Android app crashes immediately after update.",
+    "customer": "Robert Kim",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2025-09-19T08:20:00Z"
+  },
+  {
+    "id": "05",
+    "ticketId": "PH-2008",
+    "title": "Email Notifications Missing",
+    "description": "Customer not receiving order confirmation emails.",
+    "customer": "Sophia Martinez",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-20T11:50:00Z"
+  },
+  {
+    "id": "06",
+    "ticketId": "PH-2009",
+    "title": "Profile Picture Upload Fails",
+    "description": "Image upload fails with server error 500.",
+    "customer": "Daniel Johnson",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-21T15:35:00Z"
+  },
+  {
+    "id": "07",
+    "ticketId": "PH-2010",
+    "title": "Dashboard Loading Slowly",
+    "description": "Dashboard page takes more than 30 seconds to load.",
+    "customer": "Linda Zhang",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-09-22T10:05:00Z"
+  },
+  {
+    "id": "08",
+    "ticketId": "PH-2011",
+    "title": "Password Reset Link Broken",
+    "description": "Password reset link shows expired immediately.",
+    "customer": "Michael Brown",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2025-09-23T12:25:00Z"
+  },
+  {
+    "id": "09",
+    "ticketId": "PH-2012",
+    "title": "Search Not Returning Results",
+    "description": "Search returns no data even when records exist.",
+    "customer": "Olivia Davis",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-24T17:40:00Z"
+  },
+  {
+    "id": "10",
+    "ticketId": "PH-2013",
+    "title": "Two-Factor Authentication Failure",
+    "description": "2FA code rejected during login attempts.",
+    "customer": "Ethan Wilson",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-25T07:15:00Z"
+  }
+]

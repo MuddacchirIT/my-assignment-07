@@ -1,7 +1,16 @@
-export default function Main_Section() {
+import { use } from "react";
+export default function Main_Section({ fetchPromise }) {
+  const ticketsData = use(fetchPromise);
+  console.log(ticketsData);
   return (
-    <div>
-      <h2>This main Section</h2>
-    </div>
+    <>
+      {ticketsData.map((perIssue) => {
+        return (
+          <div key={perIssue.id}>
+            <h2>My issues</h2>
+          </div>
+        );
+      })}
+    </>
   );
 }
