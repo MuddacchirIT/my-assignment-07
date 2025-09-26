@@ -1,4 +1,6 @@
 import { Suspense, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import CounterBox from "./components/CounterBox";
 import Footer from "./components/Footer";
@@ -15,6 +17,11 @@ function App() {
   const handleIncrement = (task) => {
     setInProgress((prev) => prev + 1);
     setTasks((prev) => [...prev, task]);
+    toast.success(`In Progress!`, {
+      position: "top-right",
+      className: "text-xl",
+      autoClose: 2000,
+    });
   };
   return (
     <div className="bg-[#E9E9E9]">
@@ -30,6 +37,7 @@ function App() {
         />
       </Suspense>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

@@ -51,21 +51,39 @@ export default function Main_Section({ fetchPromise, onIncrement, tasks }) {
               );
             })}
           </div>
-          <aside className="shadow-md rounded-md cursor-pointer">
+          <aside className="rounded-md p-4 bg-[#FFFFFF]">
             <ul className="space-y-4">
+              <div className="p-3.5 rounded-md shadow-sm bg-gray-100">
+                <h3 className="font-semibold text-xl text-start mb-3">
+                  Task Status
+                </h3>
+                <p className="text-[#627382]">
+                  Select a ticket to add to task Status
+                </p>
+              </div>
               {tasks.map((task, index) => (
                 <li
                   key={index}
                   className="text-center p-3.5 rounded-md shadow-sm bg-[#FFFFFF]"
                 >
-                  <h3 className="font-semibold text-xl text-start mb-3">
+                  <h3 className="font-semibold text-xl text-start mb-3.5">
                     {task.title}
                   </h3>
-                  <button className="btn bg-[#02A53B] text-white w-full text-lg py-6">
+                  <button className="btn bg-[#02A53B] text-white w-full text-lg py-5.5">
                     Complete
                   </button>
                 </li>
               ))}
+            </ul>
+            <ul className="mt-16">
+              <li>
+                <div className="p-3.5 rounded-md shadow-md bg-gray-100">
+                  <h3 className="font-semibold text-xl text-start mb-3">
+                    Resolved Task
+                  </h3>
+                  <p className="text-[#627382]">No resolved tasks yet</p>
+                </div>
+              </li>
             </ul>
           </aside>
         </div>
