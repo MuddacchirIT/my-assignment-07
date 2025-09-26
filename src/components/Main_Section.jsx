@@ -1,5 +1,6 @@
 import { use } from "react";
 import calImg from "../assets/calendar.webp";
+import ballImg from "../assets/images/ball.webp";
 import Container from "./Container";
 export default function Main_Section({ fetchPromise, onIncrement, tasks }) {
   const ticketsData = use(fetchPromise);
@@ -22,9 +23,16 @@ export default function Main_Section({ fetchPromise, onIncrement, tasks }) {
                     <div>
                       <h2 className="font-semibold text-xl flex justify-between">
                         {perIssue.title}
-                        <button className="btn px-10 rounded-full text-lg">
+                        {/* <div className="flex justify-center items-center gap-2.5"> */}
+                        <button className="relative btn px-10 rounded-full text-lg bg-amber-100">
                           {perIssue.status}
+                          <img
+                            className="absolute left-3 h-5 w-5 rounded-full "
+                            src={ballImg}
+                            alt="ball"
+                          />
                         </button>
+                        {/* </div> */}
                       </h2>
                     </div>
 
