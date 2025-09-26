@@ -1,9 +1,8 @@
 import { use } from "react";
 import calImg from "../assets/calendar.webp";
 import Container from "./Container";
-export default function Main_Section({ fetchPromise }) {
+export default function Main_Section({ fetchPromise, onIncrement, tasks }) {
   const ticketsData = use(fetchPromise);
-  console.log(ticketsData);
   return (
     <>
       <Container>
@@ -16,7 +15,10 @@ export default function Main_Section({ fetchPromise }) {
             {ticketsData.map((perIssue) => {
               return (
                 <div key={perIssue.id}>
-                  <div className="shadow-md rounded-md cursor-pointer bg-[#FFFFFF] p-6 space-y-6">
+                  <div
+                    onClick={() => onIncrement(perIssue)}
+                    className="shadow-md rounded-md cursor-pointer bg-[#FFFFFF] p-6 space-y-6"
+                  >
                     <div>
                       <h2 className="font-semibold text-xl flex justify-between">
                         {perIssue.title}
@@ -49,10 +51,22 @@ export default function Main_Section({ fetchPromise }) {
               );
             })}
           </div>
-
-          <aside className="shadow-md rounded-md cursor-pointer bg-[#FFFFFF] p-4">
-            <h2 className="text-2xl font-semibold mb-4">Task Status</h2>
-            <ul className="space-y-2"></ul>
+          <aside className="shadow-md rounded-md cursor-pointer">
+            <ul className="space-y-4">
+              {tasks.map((task, index) => (
+                <li
+                  key={index}
+                  className="text-center p-3.5 rounded-md shadow-sm bg-[#FFFFFF]"
+                >
+                  <h3 className="font-semibold text-xl text-start mb-3">
+                    {task.title}
+                  </h3>
+                  <button className="btn bg-[#02A53B] text-white w-full text-lg py-6">
+                    Complete
+                  </button>
+                </li>
+              ))}
+            </ul>
           </aside>
         </div>
       </Container>

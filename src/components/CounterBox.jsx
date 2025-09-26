@@ -1,6 +1,6 @@
 import bgImg from "../assets/images/vector1.png";
 import Container from "./Container";
-export default function CounterBox() {
+export default function CounterBox({ inProgress }) {
   return (
     <Container>
       <div className="grid grid-cols-2 gap-[20px] my-[50px]">
@@ -18,7 +18,7 @@ export default function CounterBox() {
           ></div>
           <div className="relative z-10 flex flex-col items-center justify-center">
             <h2 className="text-2xl">In-Progress</h2>
-            <p className="font-semibold text-[38px]">0</p>
+            <p className="font-semibold text-[38px]">{inProgress}</p>
           </div>
         </div>
         <div className="relative rounded-md p-7 text-white h-[250px] flex flex-col items-center justify-center overflow-hidden bg-gray-600 bg-gradient-to-r from-[#54CF68] to-[#00827A]">
